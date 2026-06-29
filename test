@@ -7,3 +7,11 @@
 >
 <?php echo $val; ?>
 
+---------
+
+Update the below code in the the place of select.
+[?BB:SlotTrainingTypeDropRow?]
+<input type="checkbox" class="classonrequest" name="v_tstype[?ts_count?][]" 
+  value="[?training_type?]" [?training_type?]
+
+[PCB:SlotTrainingTypeDropRow?]
