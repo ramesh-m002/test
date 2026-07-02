@@ -1,2 +1,8 @@
-
-  
+1. If the incubating mode is false, Retain the existing implemenation of displaying with Type(single select dropdown) [in IF condition]and if the incubating mode is true, The new grouped UI displaying all slots under each simulator with the Type being displayed in Checkboxes.[in Else Condition]
+2. Fetch simulator-wise slot data from the Database and group slots by simulator before rendering the form.
+3. Replace the Type dropdown with a checkbox list in the new UI naming the checkbox fields as arrays (types[]) so multiple selections can be submitted.
+4. During Add, if the incubating mode is false, process form submission using old logic and  if the incubating mode is true , collect selected checkbox values for each slot  
+5. Convert selected checkbox values into a comma-separated string before saving. and Save the string in the existing database column for Type.
+6. During Edit,  if the incubating mode is false, render the old UI and  if the incubating mode is true, render the new grouped simulator UI .
+7. While loading Edit data when the incubating mode is true, split the stored comma-separated type string into an array. Pre-select the corresponding checkboxes based on the split array values.
+8. While loading Edit data when the incubating mode is true, check whether the stored type contains commas. If multiple types exist in old mode, split the value and select only the first value in the dropdown.
