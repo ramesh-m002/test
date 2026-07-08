@@ -1,1 +1,14 @@
+Approach to handle changes related to stored procedures:-
 
+1. We will not modify the existing external stored procedures in place.
+TM_COURSE_OFFERING_UPDATE_ADD and other procedures — possibly called by other systems we you can't see from the PHP app. Editing them in place means the "flag off" path is no longer running the exact code it always ran
+
+-------------------------------------------------------------------
+
+2. We build the new logic as new, separate procedures.
+Something like TM_COURSE_OFFERING_SLOT_TYPE_UPDATE (new) rather than extending the old one. Since these are new anyway (recall — the old procedures don't handle per-slot type data at all), this isn't extra work, it's just a naming/deployment discipline: new proc, new name, called only from the flag-on path.
+
+--------------------------------------------------------------
+
+3. Schema changes must be additive-only.
+New nullable columns or, better, a new child table rather than altering or dropping anything the old Configuration dropdown relies on. This means both shapes of data can exist side by side, and flipping the flag back doesn't strand or corrupt anything.
