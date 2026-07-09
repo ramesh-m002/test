@@ -1,3 +1,7 @@
+
+Keyword search in the course search does not function unless filters are selected first — specifically Training Type (e.g., Pilot, Management, Maintenance, Technician), Manufacturer (e.g., Cessna), and Model. Even then, the behavior is inconsistent, working only intermittently. At a minimum, users should be required to select Training Type, Manufacturer, and Model before a keyword search is allowed.
+
+
 Here's the updated acceptance criteria with point 1 revised to require a mandatory selection:
 
 **Acceptance Criteria:**
