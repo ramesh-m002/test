@@ -1,1 +1,24 @@
 In the course search, the keyword search doesn't work unless you select something first. Specifically, you have to select the Training Type (e.g., Pilot, Management, Maintenance, or Technician), then select the Manufacturer (e.g., Cessna), and then select the Model — only then can you perform the search. However, it's not perfectly synced; sometimes it works, and sometimes it doesn't. So, at minimum, if you want to search by keyword, you need to select the category (Training Type), Manufacturer, and Model list first.
+----------------------------------------------------
+
+Here are acceptance criteria for this course search issue:
+
+**Acceptance Criteria:**
+
+1. **Standalone keyword search:** User can search using only a keyword, without first selecting Training Type, Manufacturer, or Model, and relevant results are returned.
+
+2. **Filtered search:** User can select Training Type, Manufacturer, and Model (in any order or combination) and receive accurate, matching results.
+
+3. **Combined search:** User can enter a keyword AND select one or more filters (Training Type, Manufacturer, Model) together, and the search returns results that satisfy both the keyword and the selected filters.
+
+4. **Consistency:** Search results are returned reliably every time the same keyword/filter combination is used — no intermittent failures.
+
+5. **Partial filter selection:** User can search after selecting only one or two filters (e.g., just Training Type, or Training Type + Manufacturer) without being required to select all three.
+
+6. **No results handling:** If no courses match the search criteria, a clear "No results found" message is displayed instead of a blank page or error.
+
+7. **Error-free experience:** No system errors, broken states, or unresponsive UI occur during any search combination (keyword only, filters only, or both).
+
+8. **Performance:** Search results load within an acceptable time (e.g., under 2–3 seconds) regardless of which search method is used.
+
+Let me know if you'd like this tailored to a specific ticket format (e.g., Jira with Given/When/Then syntax) or if there are additional filters/fields I should account for.
