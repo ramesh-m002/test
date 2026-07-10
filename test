@@ -1,1 +1,1 @@
-It's the same bug. He asked me to add the snippet code inside the thank-you page. It's basically the same fix, but the code needs to be added to the thank-you page and also to the [form/landing] page to capture the lead. We can't test this in the lower environment — we'll have to deploy it to production and test there, because GTM and the product form aren't able to track changes in the lower environment.
+
